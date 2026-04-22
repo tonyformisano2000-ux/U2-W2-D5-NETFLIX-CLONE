@@ -17,33 +17,42 @@
   </head>
   <body class="bg-dark">
     <div class="bg-gradient d-block">
-      <img
-        class="m-3"
-        rel="logo"
-        src="./assets/assets/netflix_logo.png"
-        alt="Netflix Logo"
-        style="width: 10rem"
-      />
+      <a href="./homepage.html">
+        <img
+          class="m-3"
+          rel="logo"
+          src="./assets/assets/netflix_logo.png"
+          alt="Netflix Logo"
+          style="width: 10rem"
+      /></a>
     </div>
     <div class="container mb-5">
       <div class="row d-flex justify-content-center">
         <div class="col-6">
           <h1 class="text-white">Edit Profile</h1>
-          <hr />
+          <hr class="text-secondary" />
           <div class="row">
-            <div class="col-3">
+            <div class="col-3 position-relative">
               <img class="rounded-3 w-100" src="./assets/assets/avatar.png" />
-              <i class="bi bi-pencil-fill text-white z"></i>
+              <i
+                class="bi bi-pencil-fill text-white bg-black rounded-circle border border-white border-2 p-1 position-absolute bottom-0 start-0 mb-4 ms-1"
+                style="box-shadow: 5px 5px 5px black"
+              ></i>
             </div>
             <div class="col-9 py-2">
-              <h3 class="bg-secondary text-white">Strive Student</h3>
+              <h4 class="bg-secondary text-white p-1">Strive Student</h4>
               <p class="text-white">Language:</p>
-              <button class="dropdown-toggle">English</button>
-              <ul class="dropdown-menu">
-                <li class="dropdown-item">Spanish</li>
-                <li class="dropdown-item">Italian</li>
-                <li class="dropdown-item">French</li>
-                <li class="dropdown-item">German</li>
+              <button
+                class="dropdown-toggle text-white bg-black"
+                data-bs-toggle="dropdown"
+              >
+                English
+              </button>
+              <ul class="dropdown-menu bg-black text-white">
+                <li class="dropdown-item bg-black text-white">Spanish</li>
+                <li class="dropdown-item bg-black text-white">Italian</li>
+                <li class="dropdown-item bg-black text-white">French</li>
+                <li class="dropdown-item bg-black text-white">German</li>
               </ul>
               <hr class="text-white" />
             </div>
