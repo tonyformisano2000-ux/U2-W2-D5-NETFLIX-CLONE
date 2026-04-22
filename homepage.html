@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>homepage</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="bg-dark">
+    <header class="text-light bg-dark">
+      <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-center">
+            <a class="navbar-brand col-2" href="#"
+              ><img
+                rel="logo"
+                src="./assets/assets/netflix_logo.png"
+                alt="Netflix Logo"
+                style="max-height: 70px"
+            /></a>
+            <div class="col-9 ms-4 text-nowrap">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a
+                    class="nav-link fw-bold text-white"
+                    style="font-size: 10pt"
+                    aria-current="page"
+                    href="#"
+                    >Home</a
+                  >
+                </li>
+
+                <li class="nav-item fw-bold">
+                  <a
+                    class="nav-link text-white"
+                    style="font-size: 10pt"
+                    href="#"
+                    >TV Shows</a
+                  >
+                </li>
+                <li class="nav-item fw-bold">
+                  <a
+                    class="nav-link text-white"
+                    style="font-size: 10pt"
+                    href="#"
+                    >Movies</a
+                  >
+                </li>
+                <li class="nav-item fw-bold">
+                  <a
+                    class="nav-link text-white"
+                    style="font-size: 10pt"
+                    href="#"
+                    >Recently Added</a
+                  >
+                </li>
+                <li class="nav-item fw-bold">
+                  <a
+                    class="nav-link text-white"
+                    style="font-size: 10pt"
+                    href="#"
+                    >My List</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-search text-white"></i
+                ></a>
+              </li>
+              <!-- <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"                 <---------------------------------------------------DA AGGIUNGERE SE SI HA TEMPO 
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form> -->
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">KIDS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-bell text-white"></i
+                ></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    rel="profile"
+                    src="./assets/assets/avatar.png"
+                    alt="profile image"
+                    style="height: 35px"
+                  />
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Profile</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Ramadam Banger!</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="d-flex justify-content-between align-items-center">
+        <div class="m-3">
+          <h2 class="d-inline-block fw-normal">TV Shows</h2>
+          <button
+            class="dropdown-toggle bg-black text-white border border-white m-3"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Genres
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Romantic</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Comedy</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Horror</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Drama</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Musicall</a>
+              </li>
+            </ul>
+          </button>
+        </div>
+        <div class="m-5">
+          <i class="bi bi-list border border-1 border-white"></i>
+          <i class="bi bi-border-all border border-1 border-white"></i>
+        </div>
+      </section>
+    </header>
+    <main>
+      <div id="carouselNo1" class="carousel slide mb-4">
+        <h4 class="mx-4 text-white fw-bold">Trending Now</h4>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex row-cols-6">
+              <img
+                src="./assets/assets/media/media0.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media1.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media3.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media4.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media5.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media6.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex row-cols-6">
+              <img
+                src="./assets/assets/media/media7.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media8.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media9.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media10.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media11.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media12.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselNo1"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselNo1"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div id="carouselNo2" class="carousel slide mb-4">
+        <h4 class="mx-4 text-white fw-bold">Watch it Again</h4>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex row-cols-6">
+              <img
+                src="./assets/assets/media/media13.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media14.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media15.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media16.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media17.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media18.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex row-cols-6">
+              <img
+                src="./assets/assets/media/media19.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media20.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media21.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media22.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media23.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media24.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselNo2"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselNo2"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div id="carouselNo3" class="carousel slide mb-4">
+        <h4 class="mx-4 text-white fw-bold">New Releases</h4>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex row-cols-6">
+              <img
+                src="./assets/assets/media/media25.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media26.webp"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media27.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media28.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media29.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media30.jpg"
+                class="d-block p-1"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex row-cols-6">
+              <img
+                src="./assets/assets/media/media31.webp"
+                class="d-block p-1"
+                style="
+                  height: 100px;
+                  object-fit: cover;
+                  /* object-position: 10% 0%; */
+                "
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media32.jpg"
+                class="d-block p-1"
+                style="
+                  height: 100px;
+                  object-fit: cover;
+                  object-position: 10% 0%;
+                "
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media33.jpg"
+                class="d-block p-1"
+                style="
+                  height: 100px;
+                  object-fit: cover;
+                  object-position: 10% 0%;
+                "
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media34.jpg"
+                class="d-block p-1"
+                style="
+                  height: 100px;
+                  object-fit: cover;
+                  object-position: 10% 100%;
+                "
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media35.jpg"
+                class="d-block p-1"
+                style="
+                  height: 100px;
+                  object-fit: cover;
+                  object-position: 10% 0%;
+                "
+                alt="..."
+              />
+              <img
+                src="./assets/assets/media/media36.jpg"
+                class="d-block p-1"
+                style="
+                  height: 100px;
+                  object-fit: cover;
+                  object-position: 10% 0%;
+                "
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselNo3"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselNo3"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-2 offset-2 my-2 text-secondary">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-youtube"></i>
+          </div>
+        </div>
+        <div
+          class="row d-flex justify-content-center text-secondary text-decoration-none"
+        >
+          <div class="col-2">
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Audio and Subtitles
+              </a>
+            </p>
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Media Center
+              </a>
+            </p>
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Privacy
+              </a>
+            </p>
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Contact Us
+              </a>
+            </p>
+          </div>
+          <div class="col-2 text-center">
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Audio Description
+              </a>
+            </p>
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Investor Relations
+              </a>
+            </p>
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Legal Notices
+              </a>
+            </p>
+          </div>
+          <div class="col-2 text-center">
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Help Center
+              </a>
+            </p>
+            <p>
+              <a class="text-secondary text-decoration-none" href="#"> Jobs </a>
+            </p>
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                cookie Preferences
+              </a>
+            </p>
+          </div>
+          <div class="col-2 text-center">
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Gift Cards
+              </a>
+            </p>
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Terms of Use
+              </a>
+            </p>
+            <p>
+              <a class="text-secondary text-decoration-none" href="#">
+                Corporate Information
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="row my-2">
+          <button
+            class="border border-1 col-2 offset-2 text-secondary text-decoration-none"
+          >
+            Service Code
+          </button>
+          <p class="offset-2 text-secondary">1997-2019 Netflix, inc.</p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,1320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Netflix Clone</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body class="p-3">
+    <!-- Header -->
+    <header class="mb-3">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              src="./Netflix-assets/assets/netflix_logo.png"
+              alt="Netflix logo"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">TV Shows</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Recently Added</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">My List</a>
+              </li>
+            </ul>
+
+            <div class="d-flex flex-wrap align-items-center gap-3">
+              <form class="d-flex align-items-center" role="search">
+                <button
+                  class="btn btn-outline text-light p-0"
+                  type="submit"
+                  aria-label="Search"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
+                </button>
+              </form>
+
+              <a class="nav-link active text-light p-0" href="#">KIDS</a>
+
+              <a
+                class="nav-link active text-white p-0"
+                href="#"
+                aria-label="Notifications"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-bell-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"
+                  />
+                </svg>
+              </a>
+
+              <div class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle p-0"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="./Netflix-assets/assets/avatar.png"
+                    alt="User avatar"
+                    width="30"
+                  />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="./settings.html">Settings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./userpage.html"
+                      >My Account</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="p-0">
+      <!-- Hero Banner -->
+      <section class="hero-banner">
+        <div class="hero-banner-bg">
+          <img
+            src="./Netflix-images/stranger-things-3840x2160-25038.jpg"
+            alt="Stranger Things banner"
+          />
+        </div>
+
+        <div class="hero-banner-overlay"></div>
+
+        <div class="hero-banner-content">
+          <div class="hero-kicker">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 138">
+              <path
+                fill="#DB202C"
+                d="M340.657 0v100.203c12.36.575 24.687 1.27 36.98 2.09v21.245a1822.444 1822.444 0 0 0-58.542-2.959V0h21.562ZM512 .012l-28.077 65.094l28.07 72.438l-.031.013a1789.409 1789.409 0 0 0-24.576-3.323l-15.763-40.656l-15.913 36.882a1815.88 1815.88 0 0 0-22.662-2.36l27.371-63.43L435.352.013h23.325l14.035 36.184L488.318.012H512ZM245.093 119.526V.011h60.19v21.436h-38.628v27.78h29.227v21.245h-29.227v49.05l-21.562.004ZM164.58 21.448V.01h66.69v21.437h-22.565v98.66c-7.197.19-14.386.412-21.56.683V21.448H164.58ZM90.868 126.966V.014h59.89v21.435h-38.331v29.036c8.806-.113 21.327-.24 29.117-.222V71.51c-9.751-.12-20.758.134-29.117.217v32.164a1848.195 1848.195 0 0 1 38.331-2.62v21.247a1815.638 1815.638 0 0 0-59.89 4.45ZM48.571 77.854L48.57.01h21.562v128.96c-7.882.81-15.75 1.673-23.603 2.584L21.56 59.824v74.802a1834.87 1834.87 0 0 0-21.561 2.936V.012H20.49l28.08 77.842Zm346.854 46.965V.012h21.563V126.6c-7.179-.64-14.364-1.23-21.563-1.78Z"
+              />
+            </svg>
+          </div>
+
+          <h1 class="hero-title">Stranger Things</h1>
+
+          <div class="hero-meta">
+            <span>Show</span>
+            <span>Fantasy</span>
+            <span>2022</span>
+            <span>TV-14</span>
+          </div>
+
+          <p class="hero-description">
+            Stranger Things is a thrilling sci-fi mystery set in the 1980s,
+            where a group of friends in Hawkins uncover dark secrets, government
+            experiments, and a terrifying parallel dimension known as the Upside
+            Down.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-hero-play">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+              >
+                <circle
+                  cx="13"
+                  cy="13"
+                  r="11"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="2"
+                />
+                <path fill="#000000" d="m17 13l-6 4V9" />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-hero-info"
+              data-bs-toggle="modal"
+              data-bs-target="#movieModal"
+              data-title="Stranger Things"
+              data-review="A group of kids in Hawkins face supernatural dangers, secret government experiments and the mysterious Upside Down."
+              data-genre="Fantasy / Sci-Fi"
+              data-year="2022"
+              data-image="./Netflix-images/stranger-things-3840x2160-25038.jpg"
+            >
+              More Info
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-badge">Season 5 Coming Soon</div>
+      </section>
+
+      <!-- Content Header -->
+      <section class="mb-4">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap content-topbar"
+        >
+          <div class="d-flex align-items-center flex-wrap gap-3">
+            <h2 class="mb-0">TV Shows</h2>
+
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary border-0 dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Genres
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                <li><a class="dropdown-item" href="#">Horror</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="btn-group" role="group" aria-label="View toggle">
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75Zm0 10.5a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Z"
+                />
+              </svg>
+            </button>
+
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M3 3h5v5H3V3zm9 0h5v5h-5V3zM3 12h5v5H3v-5zm9 0h5v5h-5v-5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trending Now -->
+      <section class="mb-4">
+        <div class="section-heading px-1">
+          <h3 class="mb-0">Trending Now</h3>
+        </div>
+
+        <div id="carouselTrending" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/BTS-netflix.webp"
+                    class="movie-card"
+                    alt="BTS Universe"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="BTS Universe"
+                    data-review="A music documentary full of emotion, performance and the global phenomenon behind BTS."
+                    data-genre="Documentary / Music"
+                    data-year="2024"
+                    data-image="./Netflix-images/BTS-netflix.webp"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/Casa-de-papel.jpg"
+                    class="movie-card"
+                    alt="La Casa de Papel"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="La Casa de Papel"
+                    data-review="A criminal mastermind gathers a group of thieves for the biggest heist in Spanish history."
+                    data-genre="Crime / Thriller"
+                    data-year="2020"
+                    data-image="./Netflix-images/Casa-de-papel.jpg"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/daredevil.jpg"
+                    class="movie-card"
+                    alt="Daredevil"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Daredevil"
+                    data-review="A blind lawyer by day becomes a vigilante by night in Hell’s Kitchen."
+                    data-genre="Action / Superhero"
+                    data-year="2023"
+                    data-image="./Netflix-images/daredevil.jpg"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/narcos.jpg"
+                    class="movie-card"
+                    alt="Narcos"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Narcos"
+                    data-review="The rise and fall of Pablo Escobar and the war against the drug cartels."
+                    data-genre="Drama / Crime"
+                    data-year="2019"
+                    data-image="./Netflix-images/narcos.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/S7-3-Netlix.webp"
+                    class="movie-card"
+                    alt="Series 7"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Series 7"
+                    data-review="An intense series with dark twists and unforgettable moments."
+                    data-genre="Thriller"
+                    data-year="2025"
+                    data-image="./Netflix-images/S7-3-Netlix.webp"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/SQ-Netflix-5.jpg"
+                    class="movie-card"
+                    alt="Squid Game"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Squid Game"
+                    data-review="Desperate players compete in deadly children’s games for a life-changing prize."
+                    data-genre="Thriller / Drama"
+                    data-year="2024"
+                    data-image="./Netflix-images/SQ-Netflix-5.jpg"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media12.jpg"
+                    class="movie-card"
+                    alt="Media 12"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Media 12"
+                    data-review="A dramatic story with unexpected turns and powerful performances."
+                    data-genre="Drama"
+                    data-year="2022"
+                    data-image="./Netflix-assets/assets/media/media12.jpg"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media1.jpg"
+                    class="movie-card"
+                    alt="Media 1"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Media 1"
+                    data-review="A heartfelt title with romance, tension and emotional conflict."
+                    data-genre="Romance"
+                    data-year="2021"
+                    data-image="./Netflix-assets/assets/media/media1.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselTrending"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselTrending"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Watch It Again -->
+      <section class="mb-4">
+        <div class="section-heading px-1">
+          <h3 class="mb-0">Watch It Again</h3>
+        </div>
+
+        <div id="carouselAgain" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/S7-2-Netflix.webp"
+                    class="movie-card"
+                    alt="Series 2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Series 2"
+                    data-review="A fast-paced series full of action and suspense."
+                    data-genre="Action"
+                    data-year="2024"
+                    data-image="./Netflix-images/S7-2-Netflix.webp"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/ST-Netflix-4.jpg"
+                    class="movie-card"
+                    alt="Stranger Things"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Stranger Things"
+                    data-review="A supernatural mystery unfolds in Hawkins as evil grows stronger."
+                    data-genre="Sci-Fi / Horror"
+                    data-year="2025"
+                    data-image="./Netflix-images/ST-Netflix-4.jpg"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media15.jpg"
+                    class="movie-card"
+                    alt="Media 15"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Media 15"
+                    data-review="A light and funny story perfect for a relaxed evening."
+                    data-genre="Comedy"
+                    data-year="2023"
+                    data-image="./Netflix-assets/assets/media/media15.jpg"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media17.jpg"
+                    class="movie-card"
+                    alt="Media 17"
+                    data-bs-toggle="modal"
+                    data-bs-target="#movieModal"
+                    data-title="Media 17"
+                    data-review="Adventure, mystery and a journey full of danger."
+                    data-genre="Adventure"
+                    data-year="2022"
+                    data-image="./Netflix-assets/assets/media/media17.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media10.jpg"
+                    class="movie-card"
+                    alt="Media 10"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media11.jpg"
+                    class="movie-card"
+                    alt="Media 11"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media13.jpg"
+                    class="movie-card"
+                    alt="Media 13"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media14.webp"
+                    class="movie-card"
+                    alt="Media 14"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselAgain"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselAgain"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- New Releases -->
+      <section class="mb-4">
+        <div class="section-heading px-1">
+          <h3 class="mb-0">New Releases</h3>
+        </div>
+
+        <div id="carouselNew" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media18.jpg"
+                    class="movie-card"
+                    alt="Media 18"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media20.jpg"
+                    class="movie-card"
+                    alt="Media 20"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media28.jpg"
+                    class="movie-card"
+                    alt="Media 28"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media21.webp"
+                    class="movie-card"
+                    alt="Media 21"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media29.jpg"
+                    class="movie-card"
+                    alt="Media 29"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media27.jpg"
+                    class="movie-card"
+                    alt="Media 27"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media25.webp"
+                    class="movie-card"
+                    alt="Media 25"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media32.jpg"
+                    class="movie-card"
+                    alt="Media 32"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselNew"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselNew"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Continue Watching -->
+      <section class="mb-4">
+        <div class="section-heading px-1">
+          <h3 class="mb-0">Continue Watching</h3>
+        </div>
+
+        <div id="carouselContinue" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <div class="continue-card">
+                    <img
+                      src="./Netflix-images/8a7dd34b09c9c25336a3d850d4c431455e1aaaf0.avif"
+                      class="movie-card"
+                      alt="Continue title 1"
+                    />
+                    <span class="play-overlay">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 48 48"
+                        fill="#000000"
+                      >
+                        <g
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linejoin="round"
+                          stroke-width="4"
+                        >
+                          <path
+                            d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                          />
+                          <path
+                            d="M20 24v-6.928l6 3.464L32 24l-6 3.464l-6 3.464V24Z"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="continue-card">
+                    <img
+                      src="./Netflix-images/18980.jpg"
+                      class="movie-card"
+                      alt="Continue title 2"
+                    />
+                    <span class="play-overlay">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 48 48"
+                        fill="#000000"
+                      >
+                        <g
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linejoin="round"
+                          stroke-width="4"
+                        >
+                          <path
+                            d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                          />
+                          <path
+                            d="M20 24v-6.928l6 3.464L32 24l-6 3.464l-6 3.464V24Z"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="continue-card">
+                    <img
+                      src="./Netflix-images/DP_6702630_BulletTrain_CoverArt_3840x2160_US_2000x1125_thumbnail.jpg"
+                      class="movie-card"
+                      alt="Continue title 3"
+                    />
+                    <span class="play-overlay">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 48 48"
+                        fill="#000000"
+                      >
+                        <g
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linejoin="round"
+                          stroke-width="4"
+                        >
+                          <path
+                            d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                          />
+                          <path
+                            d="M20 24v-6.928l6 3.464L32 24l-6 3.464l-6 3.464V24Z"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="continue-card">
+                    <img
+                      src="./Netflix-images/Everything Everywhere All at Once.webp"
+                      class="movie-card"
+                      alt="Continue title 4"
+                    />
+                    <span class="play-overlay">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 48 48"
+                        fill="#000000"
+                      >
+                        <g
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linejoin="round"
+                          stroke-width="4"
+                        >
+                          <path
+                            d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                          />
+                          <path
+                            d="M20 24v-6.928l6 3.464L32 24l-6 3.464l-6 3.464V24Z"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <div class="continue-card">
+                    <img
+                      src="./Netflix-images/flm-netflix.jpg"
+                      class="movie-card"
+                      alt="Continue title 5"
+                    />
+                    <span class="play-overlay">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 48 48"
+                        fill="#000000"
+                      >
+                        <g
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linejoin="round"
+                          stroke-width="4"
+                        >
+                          <path
+                            d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                          />
+                          <path
+                            d="M20 24v-6.928l6 3.464L32 24l-6 3.464l-6 3.464V24Z"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="continue-card">
+                    <img
+                      src="./Netflix-images/theconjuring.jpg"
+                      class="movie-card"
+                      alt="Continue title 6"
+                    />
+                    <span class="play-overlay">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 48 48"
+                        fill="#000000"
+                      >
+                        <g
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linejoin="round"
+                          stroke-width="4"
+                        >
+                          <path
+                            d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                          />
+                          <path
+                            d="M20 24v-6.928l6 3.464L32 24l-6 3.464l-6 3.464V24Z"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="continue-card">
+                    <img
+                      src="./Netflix-assets/assets/media/media8.webp"
+                      class="movie-card"
+                      alt="Continue title 7"
+                    />
+                    <span class="play-overlay">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 48 48"
+                        fill="#000000"
+                      >
+                        <g
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linejoin="round"
+                          stroke-width="4"
+                        >
+                          <path
+                            d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                          />
+                          <path
+                            d="M20 24v-6.928l6 3.464L32 24l-6 3.464l-6 3.464V24Z"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="continue-card">
+                    <img
+                      src="./Netflix-images/death-note-recensione.png"
+                      class="movie-card"
+                      alt="Continue title 8"
+                    />
+                    <span class="play-overlay">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 48 48"
+                        fill="#000000"
+                      >
+                        <g
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linejoin="round"
+                          stroke-width="4"
+                        >
+                          <path
+                            d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                          />
+                          <path
+                            d="M20 24v-6.928l6 3.464L32 24l-6 3.464l-6 3.464V24Z"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselContinue"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselContinue"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Anime -->
+      <section class="mb-4">
+        <div class="section-heading px-1">
+          <h3 class="mb-0">Anime</h3>
+        </div>
+
+        <div id="carouselAnime" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/death-note-recensione.png"
+                    class="movie-card"
+                    alt="Death Note"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/SNK-Netflix.jpg"
+                    class="movie-card"
+                    alt="Attack on Titan"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/maxresdefault.jpg"
+                    class="movie-card"
+                    alt="Anime 3"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/mqdefault.jpg"
+                    class="movie-card"
+                    alt="Anime 4"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/S7-Netflix.jpg"
+                    class="movie-card"
+                    alt="Anime 5"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/netflix-anime.jpg"
+                    class="movie-card"
+                    alt="Anime 6"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/hq720 (1).jpg"
+                    class="movie-card"
+                    alt="Anime 7"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/JJKNetlflix.jpg"
+                    class="movie-card"
+                    alt="Jujutsu Kaisen"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselAnime"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselAnime"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Horror Trending Movies -->
+      <section class="mb-5">
+        <div class="section-heading px-1">
+          <h3 class="mb-0">Horror Trending Movies</h3>
+        </div>
+
+        <div id="carouselHorror" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/insidiuos.webp"
+                    class="movie-card"
+                    alt="Insidious"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/theconjuring.jpg"
+                    class="movie-card"
+                    alt="The Conjuring"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/nowhere-netflix.jpg"
+                    class="movie-card"
+                    alt="Nowhere"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-images/28-years-later.webp"
+                    class="movie-card"
+                    alt="28 Years Later"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media29.jpg"
+                    class="movie-card"
+                    alt="Media 29"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media27.jpg"
+                    class="movie-card"
+                    alt="Media 27"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media25.webp"
+                    class="movie-card"
+                    alt="Media 25"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <img
+                    src="./Netflix-assets/assets/media/media32.jpg"
+                    class="movie-card"
+                    alt="Media 32"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselHorror"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselHorror"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-5">
+      <div class="row mb-4">
+        <div class="col social-icons">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill="#43465e"
+              fill-rule="evenodd"
+              d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.792C0 19.506.494 20 1.104 20h9.578v-7.745H8.076V9.237h2.606V7.01c0-2.584 1.578-3.99 3.883-3.99c1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.596-1.496 1.47v1.927h2.989l-.39 3.018h-2.6V20h5.097c.61 0 1.104-.494 1.104-1.104V1.104C20 .494 19.506 0 18.896 0Z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            viewBox="0 0 432 432"
+          >
+            <path
+              fill="#43465e"
+              d="M384 99V56q0-11-11-11h-42q-11 0-11 11v43q0 10 11 10h42q11 0 11-10zM53 387h320q11 0 11-11V195h-45q2 12 2 21q0 53-37.5 90.5T213 344t-90.5-37.5T85 216q0-11 2-21H43v181q0 11 10 11zm160.5-256q-35.5 0-60.5 25t-25 60t25 60t60.5 25t60.5-25t25-60t-25-60t-60.5-25zM384 3q18 0 30.5 12.5T427 45v342q0 17-12.5 29.5T384 429H43q-18 0-30.5-12.5T0 387V45q0-17 12.5-29.5T43 3h341z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            viewBox="0 0 1024 832"
+          >
+            <path
+              fill="#43465e"
+              d="M1024 128q-91 0-121 4q58-35 89-132q-9 6-29.5 19t-33 20.5T898 55t-36 11Q800 0 709 0q-92 0-144.5 38.5T512 160q0 4-1 27t-1 42.5t2 26.5q-134-7-237-53T96 64q-32 55-32 96q0 57 16 94.5t56 64.5q-40 1-72 1q0 152 146 181q-27 8-56 8q-20 0-39-4q19 61 76.5 97.5T320 640q-23 23-54 37t-71 19.5t-65 6.5t-66 1q-4 0-29 1.5T0 706q27 52 110.5 89T322 832q112 0 207.5-36.5t162-97.5T805 558t69-164t22-170q0-3 9.5-5.5T930 211t31.5-13.5t34-26.5t28.5-43z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#43465e"
+              d="M23 9.71a8.5 8.5 0 0 0-.91-4.13a2.92 2.92 0 0 0-1.72-1A78.36 78.36 0 0 0 12 4.27a78.45 78.45 0 0 0-8.34.3a2.87 2.87 0 0 0-1.46.74c-.9.83-1 2.25-1.1 3.45a48.29 48.29 0 0 0 0 6.48a9.55 9.55 0 0 0 .3 2a3.14 3.14 0 0 0 .71 1.36a2.86 2.86 0 0 0 1.49.78a45.18 45.18 0 0 0 6.5.33c3.5.05 6.57 0 10.2-.28a2.88 2.88 0 0 0 1.53-.78a2.49 2.49 0 0 0 .61-1a10.58 10.58 0 0 0 .52-3.4c.04-.56.04-3.94.04-4.54ZM9.74 14.85V8.66l5.92 3.11c-1.66.92-3.85 1.96-5.92 3.08Z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="row footer-links">
+        <div class="col-6 col-md-3 d-flex flex-column">
+          <span>Audio and Subtitles</span>
+          <span>Media Center</span>
+          <span>Privacy</span>
+          <span>Contact Us</span>
+        </div>
+        <div class="col-6 col-md-3 d-flex flex-column">
+          <span>Audio Description</span>
+          <span>Investor Relations</span>
+          <span>Legal Notices</span>
+        </div>
+        <div class="col-6 col-md-3 d-flex flex-column">
+          <span>Help Center</span>
+          <span>Jobs</span>
+          <span>Cookie Preferences</span>
+        </div>
+        <div class="col-6 col-md-3 d-flex flex-column">
+          <span>Gift Cards</span>
+          <span>Terms of Use</span>
+          <span>Corporate Information</span>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col">
+          <a href="./userpage.html" class="text-decoration-none">
+            <button type="button" class="btn styleButton" style="width: 8em">
+              Service Code
+            </button>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Movie Modal -->
+    <div
+      class="modal fade"
+      id="movieModal"
+      tabindex="-1"
+      aria-labelledby="movieModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down"
+      >
+        <div class="modal-content movie-modal-content">
+          <div class="modal-body p-0">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img
+                  id="modalMovieImage"
+                  src=""
+                  alt="Movie poster"
+                  class="movie-modal-img"
+                />
+              </div>
+
+              <div class="col-md-7">
+                <div class="p-4">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-3"
+                  >
+                    <h2 id="modalMovieTitle" class="mb-0">Title</h2>
+                    <button
+                      type="button"
+                      class="btn-close btn-close-white"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+
+                  <div class="movie-meta mb-3">
+                    <span id="modalMovieYear">2025</span>
+                    <span id="modalMovieGenre">Drama</span>
+                  </div>
+
+                  <p id="modalMovieReview" class="movie-description">
+                    Description
+                  </p>
+
+                  <div class="mt-4 d-flex gap-2 flex-wrap">
+                    <button class="btn btn-netflix text-white px-4">
+                      Play
+                    </button>
+                    <button class="btn btn-outline-light px-4">My List</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const movieModal = document.getElementById("movieModal");
+
+      movieModal.addEventListener("show.bs.modal", function (event) {
+        const trigger = event.relatedTarget;
+        if (!trigger) return;
+
+        const title = trigger.getAttribute("data-title") || "Untitled";
+        const review =
+          trigger.getAttribute("data-review") || "No description available.";
+        const genre = trigger.getAttribute("data-genre") || "Unknown genre";
+        const year = trigger.getAttribute("data-year") || "Unknown year";
+        const image = trigger.getAttribute("data-image") || "";
+
+        document.getElementById("modalMovieTitle").textContent = title;
+        document.getElementById("modalMovieReview").textContent = review;
+        document.getElementById("modalMovieGenre").textContent = genre;
+        document.getElementById("modalMovieYear").textContent = year;
+        document.getElementById("modalMovieImage").src = image;
+        document.getElementById("modalMovieImage").alt = title;
+      });
+    </script>
+  </body>
+</html>
